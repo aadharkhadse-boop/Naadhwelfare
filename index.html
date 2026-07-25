@@ -30,18 +30,9 @@
   }
   @media (prefers-color-scheme:dark){
     :root{
-      --ground:#0F1424;
-      --surface:#171E33;
-      --surface-2:#1E2740;
-      --ink:#ECE8DC;
-      --ink-soft:#AEB5CC;
-      --ink-faint:#828BAA;
-      --accent:#F0B14A;
-      --accent-deep:#E39A2B;
-      --secondary:#4FB39B;
-      --secondary-soft:#1B3A34;
-      --line:rgba(236,232,220,0.14);
-      --line-strong:rgba(236,232,220,0.26);
+      --ground:#0F1424;--surface:#171E33;--surface-2:#1E2740;--ink:#ECE8DC;--ink-soft:#AEB5CC;--ink-faint:#828BAA;
+      --accent:#F0B14A;--accent-deep:#E39A2B;--secondary:#4FB39B;--secondary-soft:#1B3A34;
+      --line:rgba(236,232,220,0.14);--line-strong:rgba(236,232,220,0.26);
       --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 30px rgba(0,0,0,.35);
       --shadow-lift:0 2px 6px rgba(0,0,0,.35),0 18px 50px rgba(0,0,0,.5);
     }
@@ -66,65 +57,61 @@
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   body{
     margin:0;font-family:var(--sans);background:var(--ground);color:var(--ink);
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.6;
-    font-size:17px;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.6;font-size:17px;
   }
   h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.12;text-wrap:balance;margin:0;letter-spacing:-.01em}
   p{margin:0}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  .eyebrow{
-    font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--accent-deep);display:inline-flex;align-items:center;gap:.55em;
-  }
+  .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent-deep);display:inline-flex;align-items:center;gap:.55em}
   .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--accent);display:inline-block}
   .deva{font-family:var(--deva)}
 
-  /* ---------- Header ---------- */
-  header.site{
-    position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ground) 88%,transparent);
-    backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line);
-  }
-  .nav{display:flex;align-items:center;gap:22px;height:68px}
+  /* Header */
+  header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--ground) 88%,transparent);
+    backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;gap:16px;height:68px}
   .brand{display:flex;align-items:center;gap:12px;margin-right:auto}
-  .brand .mark{
-    width:40px;height:40px;flex:none;border-radius:11px;
+  .brand .mark{width:40px;height:40px;flex:none;border-radius:11px;
     background:radial-gradient(circle at 50% 50%,var(--accent) 0 22%,transparent 23%),
                radial-gradient(circle at 50% 50%,transparent 0 34%,var(--secondary) 35% 44%,transparent 45%),
                radial-gradient(circle at 50% 50%,transparent 0 56%,var(--ink) 57% 66%,transparent 67%);
-    background-color:var(--surface);box-shadow:inset 0 0 0 1px var(--line);
-  }
+    background-color:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
   .brand .name{font-family:var(--serif);font-weight:600;font-size:1.12rem;letter-spacing:-.01em;line-height:1.05}
   .brand .name span{display:block;font-family:var(--sans);font-weight:600;font-size:.62rem;letter-spacing:.18em;
     text-transform:uppercase;color:var(--ink-faint)}
   .navlinks{display:flex;gap:6px;align-items:center}
-  .navlinks a{
-    font-size:.93rem;font-weight:500;color:var(--ink-soft);padding:8px 12px;border-radius:8px;transition:.18s;
-  }
+  .navlinks a{font-size:.93rem;font-weight:500;color:var(--ink-soft);padding:8px 12px;border-radius:8px;transition:.18s}
   .navlinks a:hover{color:var(--ink);background:var(--surface-2)}
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--sans);
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-family:var(--sans);
     font-size:.95rem;font-weight:600;padding:11px 20px;border-radius:10px;cursor:pointer;
-    border:1px solid transparent;transition:.18s;white-space:nowrap;
-  }
-  .btn-primary{background:var(--ink);color:var(--ground);}
+    border:1px solid transparent;transition:.18s;white-space:nowrap}
+  .btn-primary{background:var(--ink);color:var(--ground)}
   .btn-primary:hover{background:var(--accent-deep);color:#fff;transform:translateY(-1px)}
   .btn-accent{background:var(--accent);color:#231a06;box-shadow:var(--shadow)}
   .btn-accent:hover{background:var(--accent-deep);color:#fff;transform:translateY(-1px)}
   .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
   .btn-ghost:hover{border-color:var(--ink);background:var(--surface-2)}
+  .langsel{font-family:var(--sans);font-size:.88rem;font-weight:600;color:var(--ink);background:var(--surface-2);
+    border:1px solid var(--line-strong);border-radius:9px;padding:0 8px;height:40px;cursor:pointer}
+  .langsel:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  .theme-toggle{background:none;border:1px solid var(--line-strong);border-radius:9px;width:42px;height:40px;
+    color:var(--ink);cursor:pointer;display:inline-grid;place-items:center;flex:none}
+  .theme-toggle:hover{background:var(--surface-2)}
+  .theme-toggle svg{width:19px;height:19px}
   .navtoggle{display:none;background:none;border:1px solid var(--line-strong);border-radius:9px;
     width:42px;height:40px;color:var(--ink);cursor:pointer;font-size:1.2rem}
-  @media (max-width:860px){
+  @media (max-width:920px){
     .navlinks,.nav .btn-accent{display:none}
     .navtoggle{display:inline-flex;align-items:center;justify-content:center}
     .navlinks.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;
-      background:var(--ground);border-bottom:1px solid var(--line);padding:14px 20px;gap:2px}
+      background:var(--ground);border-bottom:1px solid var(--line);padding:14px 20px;gap:2px;z-index:60}
     .navlinks.open a{padding:12px}
   }
 
-  /* ---------- Hero ---------- */
+  /* Hero */
   .hero{position:relative;overflow:hidden}
   .hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.9;pointer-events:none}
   .hero .glow{position:absolute;inset:0;pointer-events:none;
@@ -139,14 +126,14 @@
   .fact .n{font-family:var(--serif);font-size:1.5rem;color:var(--ink)}
   .fact .l{font-size:.8rem;color:var(--ink-faint);letter-spacing:.02em}
 
-  /* ---------- Sections ---------- */
+  /* Sections */
   section{padding:88px 0}
   .sec-head{max-width:64ch;margin-bottom:44px}
   .sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-top:14px}
   .sec-head p{color:var(--ink-soft);margin-top:16px;font-size:1.08rem}
+  .panel{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 
   /* About */
-  .about{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:start}
   @media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:34px}}
   .about-grid p+p{margin-top:16px}
@@ -161,13 +148,11 @@
   .valuelist li:nth-child(3) .dot{background:var(--ink)}
   .valuelist strong{color:var(--ink);font-weight:600}
 
-  /* Programs */
+  /* Card grids */
   .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   @media (max-width:760px){.cards{grid-template-columns:1fr}}
-  .card{
-    background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px;
-    box-shadow:var(--shadow);transition:.2s;position:relative;overflow:hidden;
-  }
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px;
+    box-shadow:var(--shadow);transition:.2s;position:relative;overflow:hidden}
   .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:var(--line-strong)}
   .card .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:18px;
     background:var(--secondary-soft);color:var(--secondary)}
@@ -180,25 +165,30 @@
     background:var(--secondary-soft);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
   .newnote b{color:var(--ink)}
 
-  /* Involve */
-  .involve{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .involve .cards{grid-template-columns:repeat(3,1fr)}
-  @media (max-width:760px){.involve .cards{grid-template-columns:1fr}}
-  .icard{background:var(--surface-2);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;
-    flex-direction:column}
+  /* Involve + Give (3-up) */
+  .involve .cards,.give-cards{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:760px){.involve .cards,.give-cards{grid-template-columns:1fr}}
+  .icard{background:var(--surface-2);border:1px solid var(--line);border-radius:18px;padding:30px;display:flex;flex-direction:column}
   .icard h3{font-size:1.2rem;margin-bottom:8px}
   .icard p{color:var(--ink-soft);font-size:1rem;flex:1}
   .icard .btn{margin-top:20px;align-self:flex-start}
+  .give-detail{margin-top:18px;display:flex;flex-direction:column;gap:2px}
+  .give-detail .k{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+  .give-detail .v{font-size:1.05rem;font-weight:600;color:var(--ink)}
+  .give-bank{margin-top:18px;display:grid;grid-template-columns:auto 1fr;gap:7px 16px}
+  .give-bank dt{color:var(--ink-faint);font-size:.85rem}
+  .give-bank dd{margin:0;color:var(--ink);font-size:.9rem;text-align:right;font-variant-numeric:tabular-nums}
+  .give .card{display:flex;flex-direction:column}
+  .give .card .btn{margin-top:auto;align-self:flex-start}
+  .give .card > p{flex:0 0 auto}
 
   /* Contact */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px}
   @media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:38px}}
   .field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
   .field label{font-size:.82rem;font-weight:600;letter-spacing:.02em;color:var(--ink-soft)}
-  .field input,.field textarea{
-    font-family:var(--sans);font-size:1rem;color:var(--ink);background:var(--surface);
-    border:1px solid var(--line-strong);border-radius:10px;padding:12px 14px;width:100%;resize:vertical;
-  }
+  .field input,.field textarea{font-family:var(--sans);font-size:1rem;color:var(--ink);background:var(--surface);
+    border:1px solid var(--line-strong);border-radius:10px;padding:12px 14px;width:100%;resize:vertical}
   .field input:focus,.field textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
   .info-block{display:grid;gap:22px}
   .info-item{display:flex;gap:14px;align-items:flex-start}
@@ -215,7 +205,6 @@
   .official dd{margin:0;color:var(--ink);font-size:.94rem;font-variant-numeric:tabular-nums;text-align:right}
   .badge-active{display:inline-flex;align-items:center;gap:.45em;color:var(--secondary);font-weight:600}
   .badge-active::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--secondary)}
-
   .placeholder{border-bottom:1px dashed var(--accent-deep);cursor:help}
 
   /* Footer */
@@ -234,10 +223,6 @@
     font-size:.82rem;color:#7f88a6}
   footer .cin{font-variant-numeric:tabular-nums;letter-spacing:.02em}
 
-  .theme-toggle{background:none;border:1px solid var(--line-strong);border-radius:9px;width:42px;height:40px;
-    color:var(--ink);cursor:pointer;display:inline-grid;place-items:center}
-  .theme-toggle:hover{background:var(--surface-2)}
-  .theme-toggle svg{width:19px;height:19px}
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
@@ -250,15 +235,21 @@
       <span class="name">NAADH <span>Welfare Foundation</span></span>
     </a>
     <nav class="navlinks" id="menu">
-      <a href="#about">About</a>
-      <a href="#programs">Programs</a>
-      <a href="#involve">Get Involved</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#programs" data-i18n="nav.programs">Programs</a>
+      <a href="#involve" data-i18n="nav.involve">Get Involved</a>
+      <a href="#donate" data-i18n="nav.donate">Donate</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
+    <select class="langsel" id="lang" aria-label="Choose language / भाषा निवडा">
+      <option value="en">English</option>
+      <option value="mr">मराठी</option>
+      <option value="hi">हिंदी</option>
+    </select>
     <button class="theme-toggle" id="themeBtn" aria-label="Toggle light and dark theme" title="Toggle theme">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
     </button>
-    <a href="#involve" class="btn btn-accent">Support our work</a>
+    <a href="#donate" class="btn btn-accent" data-i18n="btn.support">Support our work</a>
     <button class="navtoggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>
 </header>
@@ -269,40 +260,40 @@
     <canvas id="ripple" aria-hidden="true"></canvas>
     <div class="glow" aria-hidden="true"></div>
     <div class="wrap">
-      <span class="eyebrow">Registered non-profit · Nagpur · Est. 2026</span>
-      <h1>The <em>resonance</em> of learning, carried to every child.</h1>
-      <p class="lede">NAADH Welfare Foundation works to make quality education reach the children who need it most — through tutoring, learning materials, digital skills and mentorship across Nagpur and beyond.</p>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Registered non-profit · Nagpur · Est. 2026</span>
+      <h1 data-i18n="hero.h1">The <em>resonance</em> of learning, carried to every child.</h1>
+      <p class="lede" data-i18n="hero.lede">NAADH Welfare Foundation works to make quality education reach the children who need it most — through tutoring, learning materials, digital skills and mentorship across Nagpur and beyond.</p>
       <div class="cta">
-        <a href="#involve" class="btn btn-accent">Get involved</a>
-        <a href="#about" class="btn btn-ghost">Our story</a>
+        <a href="#involve" class="btn btn-accent" data-i18n="hero.cta1">Get involved</a>
+        <a href="#about" class="btn btn-ghost" data-i18n="hero.cta2">Our story</a>
       </div>
       <div class="facts">
-        <div class="fact"><div class="n deva">नाद</div><div class="l"><em>Naad</em> — the resonance of knowledge</div></div>
-        <div class="fact"><div class="n">2026</div><div class="l">Founded in Nagpur, Maharashtra</div></div>
-        <div class="fact"><div class="n">Sec-8</div><div class="l">Registered non-profit company</div></div>
+        <div class="fact"><div class="n deva">नाद</div><div class="l" data-i18n="hero.fact1"><em>Naad</em> — the resonance of knowledge</div></div>
+        <div class="fact"><div class="n">2026</div><div class="l" data-i18n="hero.fact2">Founded in Nagpur, Maharashtra</div></div>
+        <div class="fact"><div class="n">Sec-8</div><div class="l" data-i18n="hero.fact3">Registered non-profit company</div></div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="about" id="about">
+  <section class="panel" id="about">
     <div class="wrap reveal">
       <div class="sec-head">
-        <span class="eyebrow">Who we are</span>
-        <h2>A young foundation with a lasting purpose.</h2>
+        <span class="eyebrow" data-i18n="about.eyebrow">Who we are</span>
+        <h2 data-i18n="about.h2">A young foundation with a lasting purpose.</h2>
       </div>
       <div class="about-grid">
         <div class="body">
-          <p>NAADH Welfare Foundation was incorporated on <strong>20 June 2026</strong> in Nagpur as a non-government, not-for-profit company dedicated to <strong>educational support services</strong>. We are new — and deliberately so. We are building carefully, listening to the families and schools around us, and designing programs that meet real needs rather than assumed ones.</p>
-          <p>Our name comes from <strong class="deva">नाद (naad)</strong> — resonance, the sound that carries. We believe a single opportunity to learn can echo through a child's life, their family, and their whole community. That belief guides everything we do.</p>
-          <p>The Foundation is led by its founding directors, <strong>Pradhnya Rajeshji Patil</strong> and <strong>Suyash Mukesh Bangde</strong>, who established NAADH to turn that conviction into steady, accountable work on the ground.</p>
+          <p data-i18n="about.p1">NAADH Welfare Foundation was incorporated on <strong>20 June 2026</strong> in Nagpur as a non-government, not-for-profit company dedicated to <strong>educational support services</strong>. We are new — and deliberately so. We are building carefully, listening to the families and schools around us, and designing programs that meet real needs rather than assumed ones.</p>
+          <p data-i18n="about.p2">Our name comes from <strong class="deva">नाद (naad)</strong> — resonance, the sound that carries. We believe a single opportunity to learn can echo through a child's life, their family, and their whole community. That belief guides everything we do.</p>
+          <p data-i18n="about.p3">The Foundation is led by its founding directors, <strong>Pradhnya Rajeshji Patil</strong> and <strong>Suyash Mukesh Bangde</strong>, who established NAADH to turn that conviction into steady, accountable work on the ground.</p>
         </div>
         <aside class="valuecard">
-          <h3>What we stand for</h3>
+          <h3 data-i18n="about.valTitle">What we stand for</h3>
           <ul class="valuelist">
-            <li><span class="dot"></span><span><strong>Equity in education.</strong> Support should reach the child who has the least, first.</span></li>
-            <li><span class="dot"></span><span><strong>Dignity, always.</strong> We work with communities as partners, never as recipients.</span></li>
-            <li><span class="dot"></span><span><strong>Accountability.</strong> Every rupee and every hour is used with care and transparency.</span></li>
+            <li><span class="dot"></span><span data-i18n="about.val1"><strong>Equity in education.</strong> Support should reach the child who has the least, first.</span></li>
+            <li><span class="dot"></span><span data-i18n="about.val2"><strong>Dignity, always.</strong> We work with communities as partners, never as recipients.</span></li>
+            <li><span class="dot"></span><span data-i18n="about.val3"><strong>Accountability.</strong> Every rupee and every hour is used with care and transparency.</span></li>
           </ul>
         </aside>
       </div>
@@ -313,91 +304,127 @@
   <section id="programs">
     <div class="wrap reveal">
       <div class="sec-head">
-        <span class="eyebrow">What we do</span>
-        <h2>Focus areas we are building.</h2>
-        <p>Our programs are designed around the everyday barriers that keep children out of learning. As a newly founded organisation, we are launching these in phases across Nagpur.</p>
+        <span class="eyebrow" data-i18n="prog.eyebrow">What we do</span>
+        <h2 data-i18n="prog.h2">Focus areas we are building.</h2>
+        <p data-i18n="prog.lede">Our programs are designed around the everyday barriers that keep children out of learning. As a newly founded organisation, we are launching these in phases across Nagpur.</p>
       </div>
       <div class="cards">
         <div class="card">
           <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M21 7v6"/><path d="M6 9.5V15c0 1 3 3 6 3s6-2 6-3V9.5"/></svg></div>
-          <h3>Learning support &amp; tutoring</h3>
-          <p>After-school and remedial tutoring for children who are falling behind — so no student is left to struggle alone with the basics of reading, writing and maths.</p>
+          <h3 data-i18n="prog1.t">Learning support &amp; tutoring</h3>
+          <p data-i18n="prog1.d">After-school and remedial tutoring for children who are falling behind — so no student is left to struggle alone with the basics of reading, writing and maths.</p>
         </div>
         <div class="card">
           <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h9a3 3 0 0 1 0 6H5z"/><circle cx="18" cy="17" r="3"/></svg></div>
-          <h3>Scholarships &amp; school-kit support</h3>
-          <p>Fee assistance, books, uniforms and stationery for families for whom the cost of schooling is the single biggest hurdle to keeping a child enrolled.</p>
+          <h3 data-i18n="prog2.t">Scholarships &amp; school-kit support</h3>
+          <p data-i18n="prog2.d">Fee assistance, books, uniforms and stationery for families for whom the cost of schooling is the single biggest hurdle to keeping a child enrolled.</p>
         </div>
         <div class="card">
           <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
-          <h3>Digital literacy</h3>
-          <p>Hands-on computer and internet skills for students and young people, opening doors to modern learning, information and future employment.</p>
+          <h3 data-i18n="prog3.t">Digital literacy</h3>
+          <p data-i18n="prog3.d">Hands-on computer and internet skills for students and young people, opening doors to modern learning, information and future employment.</p>
         </div>
         <div class="card">
           <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
-          <h3>Mentorship &amp; guidance</h3>
-          <p>Pairing students with mentors for career guidance, confidence and life skills — support that goes beyond the classroom toward a real future.</p>
+          <h3 data-i18n="prog4.t">Mentorship &amp; guidance</h3>
+          <p data-i18n="prog4.d">Pairing students with mentors for career guidance, confidence and life skills — support that goes beyond the classroom toward a real future.</p>
         </div>
       </div>
-      <div class="newnote"><span aria-hidden="true">✦</span><span><b>We're just getting started.</b> These programs are rolling out in phases. If you'd like to help shape or fund one of them, we'd love to hear from you.</span></div>
+      <div class="newnote"><span aria-hidden="true">✦</span><span data-i18n="prog.note"><b>We're just getting started.</b> These programs are rolling out in phases. If you'd like to help shape or fund one of them, we'd love to hear from you.</span></div>
     </div>
   </section>
 
   <!-- GET INVOLVED -->
-  <section class="involve" id="involve">
+  <section class="panel" id="involve">
     <div class="wrap reveal">
       <div class="sec-head">
-        <span class="eyebrow">Get involved</span>
-        <h2>Every bit of help resonates.</h2>
-        <p>A young foundation grows through the people who believe in it. Here are three ways you can be part of NAADH's work.</p>
+        <span class="eyebrow" data-i18n="inv.eyebrow">Get involved</span>
+        <h2 data-i18n="inv.h2">Every bit of help resonates.</h2>
+        <p data-i18n="inv.lede">A young foundation grows through the people who believe in it. Here are three ways you can be part of NAADH's work.</p>
       </div>
       <div class="cards">
         <div class="icard">
-          <h3>Volunteer</h3>
-          <p>Teach, mentor, or lend a professional skill. A few hours of your time can change the course of a child's education.</p>
-          <a href="#contact" class="btn btn-ghost">Offer your time</a>
+          <h3 data-i18n="inv.vol.t">Volunteer</h3>
+          <p data-i18n="inv.vol.d">Teach, mentor, or lend a professional skill. A few hours of your time can change the course of a child's education.</p>
+          <a href="#contact" class="btn btn-ghost" data-i18n="inv.vol.btn">Offer your time</a>
         </div>
         <div class="icard">
-          <h3>Donate</h3>
-          <p>Fund a scholarship, a school kit, or a digital-literacy session. We're setting up secure giving — reach out and we'll help you contribute today.</p>
-          <a href="#contact" class="btn btn-accent">Support a child</a>
+          <h3 data-i18n="inv.don.t">Donate</h3>
+          <p data-i18n="inv.don.d">Fund a scholarship, a school kit, or a digital-literacy session. Every contribution goes straight to a child's learning.</p>
+          <a href="#donate" class="btn btn-accent" data-i18n="inv.don.btn">Support a child</a>
         </div>
         <div class="icard">
-          <h3>Partner &amp; CSR</h3>
-          <p>Schools, companies and CSR teams — collaborate with us on programs that create measurable impact in Nagpur's communities.</p>
-          <a href="#contact" class="btn btn-ghost">Start a conversation</a>
+          <h3 data-i18n="inv.par.t">Partner &amp; CSR</h3>
+          <p data-i18n="inv.par.d">Schools, companies and CSR teams — collaborate with us on programs that create measurable impact in Nagpur's communities.</p>
+          <a href="#contact" class="btn btn-ghost" data-i18n="inv.par.btn">Start a conversation</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
+  <!-- DONATE -->
+  <section class="give" id="donate">
     <div class="wrap reveal">
       <div class="sec-head">
-        <span class="eyebrow">Contact</span>
-        <h2>Reach out to NAADH Welfare Foundation.</h2>
-        <p>Questions, offers of help, or partnership ideas — we read every message.</p>
+        <span class="eyebrow" data-i18n="give.eyebrow">Ways to give</span>
+        <h2 data-i18n="give.h2">Give the gift of learning.</h2>
+        <p data-i18n="give.lede">Your contribution directly funds tutoring, school kits and digital-literacy sessions for children in Nagpur. Choose whichever way is easiest for you.</p>
+      </div>
+      <div class="cards give-cards">
+        <div class="card">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></div>
+          <h3 data-i18n="give.upi.t">Give via UPI</h3>
+          <p data-i18n="give.upi.d">The quickest way to give — send any amount from your UPI app (GPay, PhonePe, Paytm, and others).</p>
+          <div class="give-detail"><span class="k" data-i18n="give.upi.k">UPI ID</span><span class="v placeholder" title="Replace with the Foundation's UPI ID">add-your-upi@bank</span></div>
+        </div>
+        <div class="card">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M4 10v9M20 10v9M8 10v9M12 10v9M16 10v9M2 21h20"/></svg></div>
+          <h3 data-i18n="give.bank.t">Bank transfer</h3>
+          <p data-i18n="give.bank.d">For larger gifts and CSR contributions, transfer directly to the Foundation's account.</p>
+          <dl class="give-bank">
+            <dt data-i18n="give.bank.acc">Account name</dt><dd>NAADH Welfare Foundation</dd>
+            <dt data-i18n="give.bank.no">A/C number</dt><dd class="placeholder" title="Add the account number">Add account number</dd>
+            <dt data-i18n="give.bank.ifsc">IFSC</dt><dd class="placeholder" title="Add the IFSC code">Add IFSC</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 21l8.8-8.3a5 5 0 0 0 0-7.1z"/></svg></div>
+          <h3 data-i18n="give.help.t">Not sure how?</h3>
+          <p data-i18n="give.help.d">Tell us what you'd like to support — a child, a program, or a one-time gift — and we'll guide you through giving safely.</p>
+          <a href="#contact" class="btn btn-accent" data-i18n="give.help.btn">Contact us to give</a>
+        </div>
+      </div>
+      <div class="newnote"><span aria-hidden="true">✦</span><span data-i18n="give.note"><b>A note on transparency.</b> We are a newly registered non-profit. Tax-exemption (80G) details will be shared here as soon as they are available.</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="panel" id="contact">
+    <div class="wrap reveal">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="con.eyebrow">Contact</span>
+        <h2 data-i18n="con.h2">Reach out to NAADH Welfare Foundation.</h2>
+        <p data-i18n="con.lede">Questions, offers of help, or partnership ideas — we read every message.</p>
       </div>
       <div class="contact-grid">
         <form id="contactForm" novalidate>
           <div class="field">
-            <label for="cf-name">Your name</label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Full name" required>
+            <label for="cf-name" data-i18n="con.name">Your name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" data-i18n-ph="con.name.ph" placeholder="Full name" required>
           </div>
           <div class="field">
-            <label for="cf-email">Email</label>
+            <label for="cf-email" data-i18n="con.email">Email</label>
             <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
           </div>
           <div class="field">
-            <label for="cf-subject">I'd like to</label>
-            <input id="cf-subject" name="subject" type="text" placeholder="Volunteer / Donate / Partner / Ask a question">
+            <label for="cf-subject" data-i18n="con.subj">I'd like to</label>
+            <input id="cf-subject" name="subject" type="text" data-i18n-ph="con.subj.ph" placeholder="Volunteer / Donate / Partner / Ask a question">
           </div>
           <div class="field">
-            <label for="cf-msg">Message</label>
-            <textarea id="cf-msg" name="message" rows="4" placeholder="Tell us how you'd like to be involved…" required></textarea>
+            <label for="cf-msg" data-i18n="con.msg">Message</label>
+            <textarea id="cf-msg" name="message" rows="4" data-i18n-ph="con.msg.ph" placeholder="Tell us how you'd like to be involved…" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Send message</button>
+          <button type="submit" class="btn btn-primary" data-i18n="con.send">Send message</button>
           <p id="cf-note" style="font-size:.85rem;color:var(--ink-faint);margin-top:12px"></p>
         </form>
 
@@ -405,26 +432,26 @@
           <div class="info-block">
             <div class="info-item">
               <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-              <div><div class="k">Registered office</div><div class="v">4/137 Raghuji Nagar, Manewada Road,<br>Nagpur, Maharashtra 440024, India</div></div>
+              <div><div class="k" data-i18n="con.office">Registered office</div><div class="v">4/137 Raghuji Nagar, Manewada Road,<br>Nagpur, Maharashtra 440024, India</div></div>
             </div>
             <div class="info-item">
               <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg></span>
-              <div><div class="k">Email</div><div class="v"><a href="mailto:naadhwelfarefoundation@gmail.com" class="placeholder" title="Please confirm/replace this email">naadhwelfarefoundation@gmail.com</a></div></div>
+              <div><div class="k" data-i18n="con.emaillbl">Email</div><div class="v"><a href="mailto:naadhwelfarefoundation@gmail.com">naadhwelfarefoundation@gmail.com</a></div></div>
             </div>
             <div class="info-item">
               <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l1 4v2a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg></span>
-              <div><div class="k">Phone</div><div class="v"><span class="placeholder" title="Add your contact number">+91 — add your number</span></div></div>
+              <div><div class="k" data-i18n="con.phone">Phone</div><div class="v"><span class="placeholder" data-i18n="con.phone.ph" title="Add your contact number">+91 — add your number</span></div></div>
             </div>
           </div>
 
           <div class="official">
-            <h3>Official registration</h3>
+            <h3 data-i18n="con.reg">Official registration</h3>
             <dl>
               <dt>CIN</dt><dd>U85500ME2026NPL475367</dd>
-              <dt>Registration no.</dt><dd>475367</dd>
-              <dt>Incorporated</dt><dd>20 Jun 2026</dd>
-              <dt>Registrar</dt><dd>RoC-Nagpur</dd>
-              <dt>Status</dt><dd><span class="badge-active">Active</span></dd>
+              <dt data-i18n="con.regno">Registration no.</dt><dd>475367</dd>
+              <dt data-i18n="con.inc">Incorporated</dt><dd>20 Jun 2026</dd>
+              <dt data-i18n="con.roc">Registrar</dt><dd>RoC-Nagpur</dd>
+              <dt data-i18n="con.status">Status</dt><dd><span class="badge-active" data-i18n="con.active">Active</span></dd>
             </dl>
           </div>
         </div>
@@ -441,16 +468,17 @@
         <span class="name">NAADH <span>Welfare Foundation</span></span>
       </a>
       <nav class="fnav">
-        <a href="#about">About</a>
-        <a href="#programs">Programs</a>
-        <a href="#involve">Get Involved</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#programs" data-i18n="nav.programs">Programs</a>
+        <a href="#involve" data-i18n="nav.involve">Get Involved</a>
+        <a href="#donate" data-i18n="nav.donate">Donate</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
         <a href="https://github.com/aadharkhadse-boop/Naadhwelfare" target="_blank" rel="noopener">Source code ↗</a>
       </nav>
     </div>
     <div class="bottom">
-      <span>© <span id="yr">2026</span> NAADH Welfare Foundation. A registered non-profit company, Nagpur.</span>
-      <span>Open source under the MIT License · <span class="cin">CIN: U85500ME2026NPL475367</span></span>
+      <span data-i18n="foot.copy">© <span id="yr">2026</span> NAADH Welfare Foundation. A registered non-profit company, Nagpur.</span>
+      <span><span data-i18n="foot.oss">Open source under the MIT License</span> · <span class="cin">CIN: U85500ME2026NPL475367</span></span>
     </div>
   </div>
 </footer>
@@ -459,6 +487,156 @@
 (function(){
   "use strict";
   var root=document.documentElement;
+
+  /* ---------- Translations ---------- */
+  var I18N={
+    en:{
+      "nav.about":"About","nav.programs":"Programs","nav.involve":"Get Involved","nav.donate":"Donate","nav.contact":"Contact",
+      "btn.support":"Support our work",
+      "hero.eyebrow":"Registered non-profit · Nagpur · Est. 2026",
+      "hero.h1":"The <em>resonance</em> of learning, carried to every child.",
+      "hero.lede":"NAADH Welfare Foundation works to make quality education reach the children who need it most — through tutoring, learning materials, digital skills and mentorship across Nagpur and beyond.",
+      "hero.cta1":"Get involved","hero.cta2":"Our story",
+      "hero.fact1":"<em>Naad</em> — the resonance of knowledge","hero.fact2":"Founded in Nagpur, Maharashtra","hero.fact3":"Registered non-profit company",
+      "about.eyebrow":"Who we are","about.h2":"A young foundation with a lasting purpose.",
+      "about.p1":"NAADH Welfare Foundation was incorporated on <strong>20 June 2026</strong> in Nagpur as a non-government, not-for-profit company dedicated to <strong>educational support services</strong>. We are new — and deliberately so. We are building carefully, listening to the families and schools around us, and designing programs that meet real needs rather than assumed ones.",
+      "about.p2":"Our name comes from <strong class=\"deva\">नाद (naad)</strong> — resonance, the sound that carries. We believe a single opportunity to learn can echo through a child's life, their family, and their whole community. That belief guides everything we do.",
+      "about.p3":"The Foundation is led by its founding directors, <strong>Pradhnya Rajeshji Patil</strong> and <strong>Suyash Mukesh Bangde</strong>, who established NAADH to turn that conviction into steady, accountable work on the ground.",
+      "about.valTitle":"What we stand for",
+      "about.val1":"<strong>Equity in education.</strong> Support should reach the child who has the least, first.",
+      "about.val2":"<strong>Dignity, always.</strong> We work with communities as partners, never as recipients.",
+      "about.val3":"<strong>Accountability.</strong> Every rupee and every hour is used with care and transparency.",
+      "prog.eyebrow":"What we do","prog.h2":"Focus areas we are building.",
+      "prog.lede":"Our programs are designed around the everyday barriers that keep children out of learning. As a newly founded organisation, we are launching these in phases across Nagpur.",
+      "prog1.t":"Learning support &amp; tutoring","prog1.d":"After-school and remedial tutoring for children who are falling behind — so no student is left to struggle alone with the basics of reading, writing and maths.",
+      "prog2.t":"Scholarships &amp; school-kit support","prog2.d":"Fee assistance, books, uniforms and stationery for families for whom the cost of schooling is the single biggest hurdle to keeping a child enrolled.",
+      "prog3.t":"Digital literacy","prog3.d":"Hands-on computer and internet skills for students and young people, opening doors to modern learning, information and future employment.",
+      "prog4.t":"Mentorship &amp; guidance","prog4.d":"Pairing students with mentors for career guidance, confidence and life skills — support that goes beyond the classroom toward a real future.",
+      "prog.note":"<b>We're just getting started.</b> These programs are rolling out in phases. If you'd like to help shape or fund one of them, we'd love to hear from you.",
+      "inv.eyebrow":"Get involved","inv.h2":"Every bit of help resonates.",
+      "inv.lede":"A young foundation grows through the people who believe in it. Here are three ways you can be part of NAADH's work.",
+      "inv.vol.t":"Volunteer","inv.vol.d":"Teach, mentor, or lend a professional skill. A few hours of your time can change the course of a child's education.","inv.vol.btn":"Offer your time",
+      "inv.don.t":"Donate","inv.don.d":"Fund a scholarship, a school kit, or a digital-literacy session. Every contribution goes straight to a child's learning.","inv.don.btn":"Support a child",
+      "inv.par.t":"Partner &amp; CSR","inv.par.d":"Schools, companies and CSR teams — collaborate with us on programs that create measurable impact in Nagpur's communities.","inv.par.btn":"Start a conversation",
+      "give.eyebrow":"Ways to give","give.h2":"Give the gift of learning.",
+      "give.lede":"Your contribution directly funds tutoring, school kits and digital-literacy sessions for children in Nagpur. Choose whichever way is easiest for you.",
+      "give.upi.t":"Give via UPI","give.upi.d":"The quickest way to give — send any amount from your UPI app (GPay, PhonePe, Paytm, and others).","give.upi.k":"UPI ID",
+      "give.bank.t":"Bank transfer","give.bank.d":"For larger gifts and CSR contributions, transfer directly to the Foundation's account.",
+      "give.bank.acc":"Account name","give.bank.no":"A/C number","give.bank.ifsc":"IFSC",
+      "give.help.t":"Not sure how?","give.help.d":"Tell us what you'd like to support — a child, a program, or a one-time gift — and we'll guide you through giving safely.","give.help.btn":"Contact us to give",
+      "give.note":"<b>A note on transparency.</b> We are a newly registered non-profit. Tax-exemption (80G) details will be shared here as soon as they are available.",
+      "con.eyebrow":"Contact","con.h2":"Reach out to NAADH Welfare Foundation.","con.lede":"Questions, offers of help, or partnership ideas — we read every message.",
+      "con.name":"Your name","con.name.ph":"Full name","con.email":"Email","con.subj":"I'd like to","con.subj.ph":"Volunteer / Donate / Partner / Ask a question",
+      "con.msg":"Message","con.msg.ph":"Tell us how you'd like to be involved…","con.send":"Send message",
+      "con.office":"Registered office","con.emaillbl":"Email","con.phone":"Phone","con.phone.ph":"+91 — add your number",
+      "con.reg":"Official registration","con.regno":"Registration no.","con.inc":"Incorporated","con.roc":"Registrar","con.status":"Status","con.active":"Active",
+      "foot.copy":"© <span id=\"yr\">2026</span> NAADH Welfare Foundation. A registered non-profit company, Nagpur.","foot.oss":"Open source under the MIT License"
+    },
+    mr:{
+      "nav.about":"आमच्याविषयी","nav.programs":"कार्यक्रम","nav.involve":"सहभागी व्हा","nav.donate":"देणगी","nav.contact":"संपर्क",
+      "btn.support":"आमच्या कार्याला पाठिंबा द्या",
+      "hero.eyebrow":"नोंदणीकृत ना-नफा संस्था · नागपूर · स्थापना २०२६",
+      "hero.h1":"शिक्षणाचा <em>नाद</em>, प्रत्येक मुलापर्यंत.",
+      "hero.lede":"नाध वेल्फेअर फाउंडेशन दर्जेदार शिक्षण गरजू मुलांपर्यंत पोहोचवण्यासाठी कार्य करते — शिकवणी, शैक्षणिक साहित्य, डिजिटल कौशल्ये आणि मार्गदर्शनाच्या माध्यमातून, नागपूर आणि पलीकडे.",
+      "hero.cta1":"सहभागी व्हा","hero.cta2":"आमची कहाणी",
+      "hero.fact1":"<em>नाद</em> — ज्ञानाचा निनाद","hero.fact2":"नागपूर, महाराष्ट्रात स्थापन","hero.fact3":"नोंदणीकृत ना-नफा कंपनी",
+      "about.eyebrow":"आम्ही कोण आहोत","about.h2":"चिरस्थायी उद्देश असलेली नवी संस्था.",
+      "about.p1":"नाध वेल्फेअर फाउंडेशनची स्थापना <strong>२० जून २०२६</strong> रोजी नागपूर येथे झाली — <strong>शैक्षणिक सहाय्य सेवांना</strong> वाहिलेली एक ना-सरकारी, ना-नफा कंपनी. आम्ही नवे आहोत — आणि जाणीवपूर्वक. आम्ही काळजीपूर्वक उभारणी करत आहोत, आजूबाजूच्या कुटुंबांचे व शाळांचे ऐकत आहोत, आणि गृहीत गरजांऐवजी खऱ्या गरजा भागवणारे कार्यक्रम आखत आहोत.",
+      "about.p2":"आमचे नाव <strong class=\"deva\">नाद</strong> या शब्दापासून आले आहे — निनाद, दूरवर पोहोचणारा ध्वनी. आमचा विश्वास आहे की शिकण्याची एकच संधी मुलाच्या आयुष्यात, त्याच्या कुटुंबात आणि संपूर्ण समुदायात निनादत राहते. हाच विश्वास आमच्या प्रत्येक कृतीला दिशा देतो.",
+      "about.p3":"फाउंडेशनचे नेतृत्व संस्थापक संचालक <strong>प्रज्ञा राजेशजी पाटील</strong> आणि <strong>सुयश मुकेश बांगडे</strong> करतात, ज्यांनी हा विश्वास प्रत्यक्ष, उत्तरदायी कार्यात रूपांतरित करण्यासाठी नाधची स्थापना केली.",
+      "about.valTitle":"आमची मूल्ये",
+      "about.val1":"<strong>शिक्षणात समता.</strong> मदत सर्वात आधी ज्याच्याकडे कमीत कमी आहे त्या मुलापर्यंत पोहोचावी.",
+      "about.val2":"<strong>नेहमी सन्मान.</strong> आम्ही समुदायांसोबत भागीदार म्हणून काम करतो, कधीही लाभार्थी म्हणून नाही.",
+      "about.val3":"<strong>उत्तरदायित्व.</strong> प्रत्येक रुपया आणि प्रत्येक तास काळजीपूर्वक व पारदर्शकतेने वापरला जातो.",
+      "prog.eyebrow":"आम्ही काय करतो","prog.h2":"आम्ही उभारत असलेली क्षेत्रे.",
+      "prog.lede":"मुलांना शिक्षणापासून दूर ठेवणाऱ्या रोजच्या अडथळ्यांभोवती आमचे कार्यक्रम आखले आहेत. नव्याने स्थापन झालेली संस्था म्हणून, आम्ही हे नागपूरभर टप्प्याटप्प्याने सुरू करत आहोत.",
+      "prog1.t":"अध्ययन सहाय्य व शिकवणी","prog1.d":"मागे पडणाऱ्या मुलांसाठी शाळेनंतरची व उपचारात्मक शिकवणी — जेणेकरून वाचन, लेखन व गणिताच्या मूलभूत गोष्टींशी कोणत्याही विद्यार्थ्याला एकट्याने झुंजावे लागू नये.",
+      "prog2.t":"शिष्यवृत्ती व शालेय साहित्य सहाय्य","prog2.d":"ज्या कुटुंबांसाठी शिक्षणाचा खर्च हाच मुलाला शाळेत टिकवण्यातील सर्वात मोठा अडथळा आहे त्यांच्यासाठी फी सहाय्य, पुस्तके, गणवेश व लेखनसाहित्य.",
+      "prog3.t":"डिजिटल साक्षरता","prog3.d":"विद्यार्थ्यांना व तरुणांना प्रत्यक्ष संगणक व इंटरनेट कौशल्ये — आधुनिक शिक्षण, माहिती व भविष्यातील रोजगाराची दारे उघडणारी.",
+      "prog4.t":"मार्गदर्शन व दिशादर्शन","prog4.d":"करिअर मार्गदर्शन, आत्मविश्वास व जीवनकौशल्यांसाठी विद्यार्थ्यांना मार्गदर्शकांशी जोडणे — वर्गाच्या पलीकडे जाऊन खऱ्या भविष्याकडे नेणारे सहाय्य.",
+      "prog.note":"<b>आम्ही नुकतीच सुरुवात केली आहे.</b> हे कार्यक्रम टप्प्याटप्प्याने सुरू होत आहेत. यापैकी एखादा घडवण्यात किंवा निधी देण्यात मदत करू इच्छित असाल, तर आम्हाला जरूर कळवा.",
+      "inv.eyebrow":"सहभागी व्हा","inv.h2":"प्रत्येक मदतीचा निनाद उमटतो.",
+      "inv.lede":"नवी संस्था तिच्यावर विश्वास ठेवणाऱ्या लोकांमुळे वाढते. नाधच्या कार्याचा भाग होण्याचे तीन मार्ग येथे आहेत.",
+      "inv.vol.t":"स्वयंसेवक व्हा","inv.vol.d":"शिकवा, मार्गदर्शन करा किंवा एखादे व्यावसायिक कौशल्य द्या. तुमच्या काही तासांमुळे एखाद्या मुलाच्या शिक्षणाची दिशा बदलू शकते.","inv.vol.btn":"वेळ द्या",
+      "inv.don.t":"देणगी द्या","inv.don.d":"शिष्यवृत्ती, शालेय किट किंवा डिजिटल-साक्षरता सत्रासाठी निधी द्या. प्रत्येक योगदान थेट मुलाच्या शिक्षणाकडे जाते.","inv.don.btn":"एका मुलाला आधार द्या",
+      "inv.par.t":"भागीदारी व CSR","inv.par.d":"शाळा, कंपन्या व CSR संघ — नागपूरच्या समुदायांत मोजता येईल असा परिणाम घडवणाऱ्या कार्यक्रमांत आमच्यासोबत सहकार्य करा.","inv.par.btn":"संवाद सुरू करा",
+      "give.eyebrow":"देणगीचे मार्ग","give.h2":"शिक्षणाची भेट द्या.",
+      "give.lede":"तुमचे योगदान थेट नागपुरातील मुलांसाठी शिकवणी, शालेय किट व डिजिटल-साक्षरता सत्रांना निधी पुरवते. तुम्हाला सोयीचा वाटेल तो मार्ग निवडा.",
+      "give.upi.t":"UPI द्वारे द्या","give.upi.d":"देण्याचा सर्वात जलद मार्ग — तुमच्या UPI ॲपवरून (GPay, PhonePe, Paytm इ.) कोणतीही रक्कम पाठवा.","give.upi.k":"UPI आयडी",
+      "give.bank.t":"बँक हस्तांतरण","give.bank.d":"मोठ्या देणग्या व CSR योगदानासाठी थेट फाउंडेशनच्या खात्यात हस्तांतरण करा.",
+      "give.bank.acc":"खातेधारकाचे नाव","give.bank.no":"खाते क्रमांक","give.bank.ifsc":"IFSC",
+      "give.help.t":"कसे द्यावे हे माहीत नाही?","give.help.d":"तुम्हाला कशाला पाठिंबा द्यायचा आहे ते सांगा — एखादे मूल, एखादा कार्यक्रम किंवा एकवेळची देणगी — आणि आम्ही सुरक्षितपणे देण्यास मार्गदर्शन करू.","give.help.btn":"देण्यासाठी संपर्क करा",
+      "give.note":"<b>पारदर्शकतेबद्दल एक सूचना.</b> आम्ही नव्याने नोंदणीकृत ना-नफा संस्था आहोत. कर-सवलत (80G) तपशील उपलब्ध होताच येथे दिला जाईल.",
+      "con.eyebrow":"संपर्क","con.h2":"नाध वेल्फेअर फाउंडेशनशी संपर्क साधा.","con.lede":"प्रश्न, मदतीच्या ऑफर्स किंवा भागीदारीच्या कल्पना — आम्ही प्रत्येक संदेश वाचतो.",
+      "con.name":"तुमचे नाव","con.name.ph":"पूर्ण नाव","con.email":"ईमेल","con.subj":"मला हवे आहे","con.subj.ph":"स्वयंसेवा / देणगी / भागीदारी / प्रश्न विचारा",
+      "con.msg":"संदेश","con.msg.ph":"तुम्ही कसे सहभागी होऊ इच्छिता ते सांगा…","con.send":"संदेश पाठवा",
+      "con.office":"नोंदणीकृत कार्यालय","con.emaillbl":"ईमेल","con.phone":"दूरध्वनी","con.phone.ph":"+91 — तुमचा क्रमांक जोडा",
+      "con.reg":"अधिकृत नोंदणी","con.regno":"नोंदणी क्र.","con.inc":"स्थापना","con.roc":"निबंधक","con.status":"स्थिती","con.active":"सक्रिय",
+      "foot.copy":"© <span id=\"yr\">2026</span> नाध वेल्फेअर फाउंडेशन. नोंदणीकृत ना-नफा कंपनी, नागपूर.","foot.oss":"MIT परवान्याअंतर्गत मुक्तस्रोत"
+    },
+    hi:{
+      "nav.about":"हमारे बारे में","nav.programs":"कार्यक्रम","nav.involve":"जुड़ें","nav.donate":"दान","nav.contact":"संपर्क",
+      "btn.support":"हमारे काम का समर्थन करें",
+      "hero.eyebrow":"पंजीकृत गैर-लाभकारी संस्था · नागपुर · स्थापना २०२६",
+      "hero.h1":"शिक्षा की <em>गूँज</em>, हर बच्चे तक.",
+      "hero.lede":"नाध वेलफेयर फाउंडेशन गुणवत्तापूर्ण शिक्षा उन बच्चों तक पहुँचाने के लिए काम करता है जिन्हें इसकी सबसे अधिक आवश्यकता है — ट्यूशन, शैक्षणिक सामग्री, डिजिटल कौशल और मार्गदर्शन के माध्यम से, नागपुर और उससे आगे।",
+      "hero.cta1":"जुड़ें","hero.cta2":"हमारी कहानी",
+      "hero.fact1":"<em>नाद</em> — ज्ञान की गूँज","hero.fact2":"नागपुर, महाराष्ट्र में स्थापित","hero.fact3":"पंजीकृत गैर-लाभकारी कंपनी",
+      "about.eyebrow":"हम कौन हैं","about.h2":"स्थायी उद्देश्य वाली एक नई संस्था.",
+      "about.p1":"नाध वेलफेयर फाउंडेशन की स्थापना <strong>20 जून 2026</strong> को नागपुर में हुई — <strong>शैक्षिक सहायता सेवाओं</strong> को समर्पित एक गैर-सरकारी, गैर-लाभकारी कंपनी। हम नए हैं — और सोच-समझकर। हम सावधानी से निर्माण कर रहे हैं, अपने आस-पास के परिवारों और स्कूलों को सुन रहे हैं, और मान ली गई ज़रूरतों के बजाय वास्तविक ज़रूरतों को पूरा करने वाले कार्यक्रम बना रहे हैं।",
+      "about.p2":"हमारा नाम <strong class=\"deva\">नाद</strong> शब्द से आया है — गूँज, वह ध्वनि जो दूर तक जाती है। हमारा मानना है कि सीखने का एक अवसर बच्चे के जीवन, उसके परिवार और पूरे समुदाय में गूँजता रहता है। यही विश्वास हमारे हर कार्य का मार्गदर्शन करता है।",
+      "about.p3":"फाउंडेशन का नेतृत्व इसके संस्थापक निदेशक <strong>प्रज्ञा राजेशजी पाटील</strong> और <strong>सुयश मुकेश बांगडे</strong> करते हैं, जिन्होंने इस विश्वास को ज़मीनी, जवाबदेह कार्य में बदलने के लिए नाध की स्थापना की।",
+      "about.valTitle":"हमारे मूल्य",
+      "about.val1":"<strong>शिक्षा में समानता।</strong> मदद सबसे पहले उस बच्चे तक पहुँचे जिसके पास सबसे कम है।",
+      "about.val2":"<strong>हमेशा सम्मान।</strong> हम समुदायों के साथ साझेदार के रूप में काम करते हैं, कभी प्राप्तकर्ता के रूप में नहीं।",
+      "about.val3":"<strong>जवाबदेही।</strong> हर रुपया और हर घंटा सावधानी और पारदर्शिता से उपयोग किया जाता है।",
+      "prog.eyebrow":"हम क्या करते हैं","prog.h2":"हमारे कार्यक्षेत्र.",
+      "prog.lede":"हमारे कार्यक्रम उन रोज़मर्रा की बाधाओं को ध्यान में रखकर बनाए गए हैं जो बच्चों को शिक्षा से दूर रखती हैं। एक नई संस्था के रूप में, हम इन्हें नागपुर भर में चरणबद्ध तरीके से शुरू कर रहे हैं।",
+      "prog1.t":"अध्ययन सहायता और ट्यूशन","prog1.d":"पिछड़ रहे बच्चों के लिए स्कूल के बाद और उपचारात्मक ट्यूशन — ताकि पढ़ने, लिखने और गणित की बुनियादी बातों से किसी भी छात्र को अकेले न जूझना पड़े।",
+      "prog2.t":"छात्रवृत्ति और स्कूल-किट सहायता","prog2.d":"उन परिवारों के लिए फीस सहायता, किताबें, वर्दी और स्टेशनरी जिनके लिए स्कूली शिक्षा का खर्च बच्चे को पढ़ाई में बनाए रखने की सबसे बड़ी बाधा है।",
+      "prog3.t":"डिजिटल साक्षरता","prog3.d":"छात्रों और युवाओं के लिए व्यावहारिक कंप्यूटर व इंटरनेट कौशल, जो आधुनिक शिक्षा, जानकारी और भविष्य के रोज़गार के द्वार खोलते हैं।",
+      "prog4.t":"मार्गदर्शन और दिशा-निर्देश","prog4.d":"करियर मार्गदर्शन, आत्मविश्वास और जीवन-कौशल के लिए छात्रों को मार्गदर्शकों से जोड़ना — कक्षा से आगे बढ़कर एक वास्तविक भविष्य की ओर ले जाने वाली सहायता।",
+      "prog.note":"<b>हमने अभी-अभी शुरुआत की है।</b> ये कार्यक्रम चरणों में शुरू हो रहे हैं। यदि आप इनमें से किसी को आकार देने या वित्तपोषित करने में मदद करना चाहते हैं, तो हमें बताएँ।",
+      "inv.eyebrow":"जुड़ें","inv.h2":"हर मदद की गूँज होती है.",
+      "inv.lede":"एक नई संस्था उन लोगों से बढ़ती है जो उस पर विश्वास करते हैं। नाध के कार्य का हिस्सा बनने के तीन तरीके यहाँ हैं।",
+      "inv.vol.t":"स्वयंसेवक बनें","inv.vol.d":"पढ़ाएँ, मार्गदर्शन करें, या कोई पेशेवर कौशल दें। आपके कुछ घंटे किसी बच्चे की शिक्षा की दिशा बदल सकते हैं।","inv.vol.btn":"समय दें",
+      "inv.don.t":"दान करें","inv.don.d":"छात्रवृत्ति, स्कूल किट या डिजिटल-साक्षरता सत्र के लिए धन दें। हर योगदान सीधे बच्चे की पढ़ाई तक जाता है।","inv.don.btn":"एक बच्चे का सहारा बनें",
+      "inv.par.t":"साझेदारी और CSR","inv.par.d":"स्कूल, कंपनियाँ और CSR टीमें — नागपुर के समुदायों में मापने योग्य प्रभाव पैदा करने वाले कार्यक्रमों में हमारे साथ सहयोग करें।","inv.par.btn":"बातचीत शुरू करें",
+      "give.eyebrow":"दान के तरीके","give.h2":"सीखने का उपहार दें.",
+      "give.lede":"आपका योगदान सीधे नागपुर के बच्चों के लिए ट्यूशन, स्कूल किट और डिजिटल-साक्षरता सत्रों का वित्तपोषण करता है। जो तरीका आपके लिए सबसे आसान हो, वह चुनें।",
+      "give.upi.t":"UPI से दें","give.upi.d":"देने का सबसे तेज़ तरीका — अपने UPI ऐप (GPay, PhonePe, Paytm आदि) से कोई भी राशि भेजें।","give.upi.k":"UPI आईडी",
+      "give.bank.t":"बैंक ट्रांसफर","give.bank.d":"बड़े दान और CSR योगदान के लिए सीधे फाउंडेशन के खाते में ट्रांसफर करें।",
+      "give.bank.acc":"खाता नाम","give.bank.no":"खाता संख्या","give.bank.ifsc":"IFSC",
+      "give.help.t":"कैसे दें, यकीन नहीं?","give.help.d":"बताएँ कि आप किसका समर्थन करना चाहते हैं — एक बच्चा, एक कार्यक्रम, या एक बार का दान — और हम आपको सुरक्षित रूप से देने में मार्गदर्शन करेंगे।","give.help.btn":"देने के लिए संपर्क करें",
+      "give.note":"<b>पारदर्शिता पर एक नोट।</b> हम एक नई पंजीकृत गैर-लाभकारी संस्था हैं। कर-छूट (80G) विवरण उपलब्ध होते ही यहाँ साझा किया जाएगा।",
+      "con.eyebrow":"संपर्क","con.h2":"नाध वेलफेयर फाउंडेशन से संपर्क करें.","con.lede":"प्रश्न, मदद के प्रस्ताव, या साझेदारी के विचार — हम हर संदेश पढ़ते हैं।",
+      "con.name":"आपका नाम","con.name.ph":"पूरा नाम","con.email":"ईमेल","con.subj":"मैं चाहता/चाहती हूँ","con.subj.ph":"स्वयंसेवा / दान / साझेदारी / प्रश्न पूछें",
+      "con.msg":"संदेश","con.msg.ph":"बताएँ कि आप कैसे जुड़ना चाहते हैं…","con.send":"संदेश भेजें",
+      "con.office":"पंजीकृत कार्यालय","con.emaillbl":"ईमेल","con.phone":"फ़ोन","con.phone.ph":"+91 — अपना नंबर जोड़ें",
+      "con.reg":"आधिकारिक पंजीकरण","con.regno":"पंजीकरण सं.","con.inc":"निगमन","con.roc":"रजिस्ट्रार","con.status":"स्थिति","con.active":"सक्रिय",
+      "foot.copy":"© <span id=\"yr\">2026</span> नाध वेलफेयर फाउंडेशन. पंजीकृत गैर-लाभकारी कंपनी, नागपुर.","foot.oss":"MIT लाइसेंस के तहत ओपन सोर्स"
+    }
+  };
+
+  function setYear(){try{var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();}catch(e){}}
+  function applyLang(lang){
+    var dict=I18N[lang]||I18N.en;
+    var nodes=document.querySelectorAll('[data-i18n]');
+    for(var i=0;i<nodes.length;i++){var k=nodes[i].getAttribute('data-i18n');if(dict[k]!=null)nodes[i].innerHTML=dict[k];}
+    var ph=document.querySelectorAll('[data-i18n-ph]');
+    for(var j=0;j<ph.length;j++){var kk=ph[j].getAttribute('data-i18n-ph');if(dict[kk]!=null)ph[j].setAttribute('placeholder',dict[kk]);}
+    root.setAttribute('lang',lang);
+    setYear();
+    var sel=document.getElementById('lang');if(sel)sel.value=lang;
+    try{localStorage.setItem('naadh-lang',lang);}catch(e){}
+  }
+
+  var saved='en';
+  try{saved=localStorage.getItem('naadh-lang')||'en';}catch(e){}
+  if(!I18N[saved])saved='en';
+  applyLang(saved);
+  var langSel=document.getElementById('lang');
+  if(langSel)langSel.addEventListener('change',function(){applyLang(this.value);});
 
   /* Theme toggle */
   var btn=document.getElementById('themeBtn');
@@ -471,28 +649,26 @@
 
   /* Mobile menu */
   var nt=document.getElementById('navToggle'),menu=document.getElementById('menu');
-  nt.addEventListener('click',function(){
-    var open=menu.classList.toggle('open');
-    nt.setAttribute('aria-expanded',open?'true':'false');
-  });
+  nt.addEventListener('click',function(){var open=menu.classList.toggle('open');nt.setAttribute('aria-expanded',open?'true':'false');});
   menu.addEventListener('click',function(e){if(e.target.tagName==='A')menu.classList.remove('open');});
 
-  /* Year */
-  try{document.getElementById('yr').textContent=new Date().getFullYear();}catch(e){}
-
-  /* Contact form -> mailto (no backend) */
+  /* Contact form -> mailto */
   var form=document.getElementById('contactForm'),note=document.getElementById('cf-note');
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    var lang=root.getAttribute('lang')||'en';
+    var msgs={en:{fill:'Please fill in your name, email and a message.',open:'Opening your email app… if nothing happens, write to us directly at naadhwelfarefoundation@gmail.com'},
+      mr:{fill:'कृपया तुमचे नाव, ईमेल आणि संदेश भरा.',open:'तुमचे ईमेल ॲप उघडत आहे… काही न झाल्यास, थेट naadhwelfarefoundation@gmail.com वर लिहा'},
+      hi:{fill:'कृपया अपना नाम, ईमेल और संदेश भरें।',open:'आपका ईमेल ऐप खुल रहा है… यदि कुछ न हो, तो सीधे naadhwelfarefoundation@gmail.com पर लिखें'}};
+    var m=msgs[lang]||msgs.en;
     var name=(document.getElementById('cf-name').value||'').trim();
     var email=(document.getElementById('cf-email').value||'').trim();
     var subj=(document.getElementById('cf-subject').value||'General enquiry').trim();
-    var msg=(document.getElementById('cf-msg').value||'').trim();
-    if(!name||!email||!msg){note.textContent='Please fill in your name, email and a message.';return;}
-    var body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+msg);
-    var link='mailto:naadhwelfarefoundation@gmail.com?subject='+encodeURIComponent('['+subj+'] — Website enquiry from '+name)+'&body='+body;
-    window.location.href=link;
-    note.textContent='Opening your email app… if nothing happens, write to us directly at naadhwelfarefoundation@gmail.com';
+    var body=(document.getElementById('cf-msg').value||'').trim();
+    if(!name||!email||!body){note.textContent=m.fill;return;}
+    var mailbody=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\n'+body);
+    window.location.href='mailto:naadhwelfarefoundation@gmail.com?subject='+encodeURIComponent('['+subj+'] — Website enquiry from '+name)+'&body='+mailbody;
+    note.textContent=m.open;
   });
 
   /* Scroll reveal */
@@ -505,38 +681,22 @@
   /* Hero ripple — the "naad" resonance motif */
   var canvas=document.getElementById('ripple');
   if(canvas && canvas.getContext){
-    var ctx=canvas.getContext('2d'),W,H,DPR,cx,cy,t=0,raf;
+    var ctx=canvas.getContext('2d'),W,H,DPR,cx,cy,t=0;
     var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     function accent(){var s=getComputedStyle(root);return {a:s.getPropertyValue('--accent').trim()||'#E39A2B',b:s.getPropertyValue('--secondary').trim()||'#2E7D6B'};}
-    function resize(){
-      DPR=Math.min(window.devicePixelRatio||1,2);
-      W=canvas.clientWidth;H=canvas.clientHeight;
-      canvas.width=W*DPR;canvas.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
-      cx=W*0.8;cy=H*0.34;
-    }
+    function resize(){DPR=Math.min(window.devicePixelRatio||1,2);W=canvas.clientWidth;H=canvas.clientHeight;canvas.width=W*DPR;canvas.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);cx=W*0.8;cy=H*0.34;}
     function hex2rgb(h){h=h.replace('#','');if(h.length===3)h=h.split('').map(function(c){return c+c;}).join('');var n=parseInt(h,16);return [(n>>16)&255,(n>>8)&255,n&255];}
     function draw(){
-      ctx.clearRect(0,0,W,H);
-      var col=accent(),c1=hex2rgb(col.a),c2=hex2rgb(col.b);
-      var rings=7,max=Math.max(W,H)*0.95;
-      for(var i=0;i<rings;i++){
-        var phase=((t/220)+i/rings)%1;
-        var r=phase*max;
-        var alpha=(1-phase)*0.28;
-        var mix=i/rings;
+      ctx.clearRect(0,0,W,H);var col=accent(),c1=hex2rgb(col.a),c2=hex2rgb(col.b),rings=7,max=Math.max(W,H)*0.95;
+      for(var i=0;i<rings;i++){var phase=((t/220)+i/rings)%1,r=phase*max,alpha=(1-phase)*0.28,mix=i/rings;
         var R=Math.round(c1[0]*(1-mix)+c2[0]*mix),G=Math.round(c1[1]*(1-mix)+c2[1]*mix),B=Math.round(c1[2]*(1-mix)+c2[2]*mix);
-        ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);
-        ctx.strokeStyle='rgba('+R+','+G+','+B+','+alpha+')';
-        ctx.lineWidth=1.4;ctx.stroke();
-      }
-      t+=1;raf=requestAnimationFrame(draw);
+        ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.strokeStyle='rgba('+R+','+G+','+B+','+alpha+')';ctx.lineWidth=1.4;ctx.stroke();}
+      t+=1;requestAnimationFrame(draw);
     }
-    function staticDraw(){
-      ctx.clearRect(0,0,W,H);var col=accent(),c1=hex2rgb(col.a),c2=hex2rgb(col.b);
-      for(var i=1;i<=6;i++){var r=i*Math.max(W,H)*0.13;var mix=i/6;
+    function staticDraw(){ctx.clearRect(0,0,W,H);var col=accent(),c1=hex2rgb(col.a),c2=hex2rgb(col.b);
+      for(var i=1;i<=6;i++){var r=i*Math.max(W,H)*0.13,mix=i/6;
         var R=Math.round(c1[0]*(1-mix)+c2[0]*mix),G=Math.round(c1[1]*(1-mix)+c2[1]*mix),B=Math.round(c1[2]*(1-mix)+c2[2]*mix);
-        ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.strokeStyle='rgba('+R+','+G+','+B+',0.16)';ctx.lineWidth=1.4;ctx.stroke();}
-    }
+        ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.strokeStyle='rgba('+R+','+G+','+B+',0.16)';ctx.lineWidth=1.4;ctx.stroke();}}
     resize();reduce?staticDraw():draw();
     var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){resize();if(reduce)staticDraw();},150);});
   }

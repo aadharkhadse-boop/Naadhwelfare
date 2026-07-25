@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: General enquiry / contact the Foundation
+    url: mailto:naadhwelfarefoundation@gmail.com
+    about: For questions that aren't bugs or feature requests, email us directly.
