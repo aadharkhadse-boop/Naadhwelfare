@@ -73,10 +73,18 @@ Everything lives in `index.html`. The most common edits:
 
 Because it's a static site, you can host it for **free** almost anywhere:
 
-- **GitHub Pages** — push this repo, then enable Pages on the `main` branch.
+- **GitHub Pages** — push to [this repo](https://github.com/aadharkhadse-boop/Naadhwelfare),
+  then enable Pages on the `main` branch. Your site will be live at
+  `https://aadharkhadse-boop.github.io/Naadhwelfare`.
 - **Netlify** — drag the folder onto [app.netlify.com/drop](https://app.netlify.com/drop).
 - **Vercel** — `vercel` in this directory, or import the repo.
 - **Cloudflare Pages** — connect the repo, no build command needed.
+
+Clone it with:
+
+```bash
+git clone https://github.com/aadharkhadse-boop/Naadhwelfare.git
+```
 
 ## 🤝 Contributing
 

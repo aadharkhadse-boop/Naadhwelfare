@@ -30,9 +30,8 @@ Examples of unacceptable behaviour:
 ## Enforcement
 
 Instances of abusive or unacceptable behaviour may be reported to the project
-maintainers at **naadhwelfarefoundation@gmail.com** *(please confirm this
-address)*. All complaints will be reviewed and investigated promptly and
-fairly.
+maintainers at **naadhwelfarefoundation@gmail.com**. All complaints will be
+reviewed and investigated promptly and fairly.
 
 ## Attribution
 

@@ -41,5 +41,4 @@ By participating, you agree to uphold our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Questions?
 
-Open an issue, or reach the Foundation at **naadhwelfarefoundation@gmail.com**
-*(please confirm this address)*.
+Open an issue, or reach the Foundation at **naadhwelfarefoundation@gmail.com**.
